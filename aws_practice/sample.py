@@ -13,8 +13,7 @@ spark = SparkSession.builder.appName("PySpark S3 Example")\
 # Corrected S3 path
 s3_input_path = "s3a://dembuck10/2015Q1.csv"
 s3_output_path = "s3a://dembuck1010/path/to/output-file.csv"
- 
-# Read the input data from S3
+
 df = spark.read.csv(s3_input_path, header=True, inferSchema=True)
 df.show()
  
